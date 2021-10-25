@@ -7,13 +7,15 @@
     * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       background: black;
       color: white;
       text-align: center;
-      border: 1px solid white;
+      border: 10px solid white;
+      height: 100vh;
     }
 
     p {
@@ -30,7 +32,21 @@
   <h1>Contador</h1>
   <p>0</p>
   <button>menos</button>
-  <button>mais</button>
+  <button onclick="somar()">mais</button>
+  <script>
+    function somar() {
+      // pegar o número atual
+      const p = document.querySelector("p")
+      var numero = parseInt(p.innerText)
+
+      // somar mais 1 ao número atual
+      numero = numero + 1
+      console.log(numero)
+
+      // atualizar o número na tela
+      p.innerText = numero
+    }
+  </script>
 </body>
 
 </html>

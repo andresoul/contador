@@ -31,22 +31,36 @@
 <body>
   <h1>Contador</h1>
   <p>0</p>
-  <button>menos</button>
+  <button onclick="subtrair()">menos</button>
   <button onclick="somar()">mais</button>
   <script>
     function somar() {
-      // pegar o número atual
-      const p = document.querySelector("p")
-      var numero = parseInt(p.innerText)
-
-      // somar mais 1 ao número atual
-      numero = numero + 1
-      console.log(numero)
-
-      // atualizar o número na tela
-      p.innerText = numero
+        // pegar o número atual
+        const p = document.querySelector("p")
+        var numero = parseInt(p.innerText)
+    
+        // somar mais 1 ao número atual
+        numero = numero + 1
+        console.log(numero)
+    
+        // atualizar o número na tela
+        p.innerText = numero
+    }
+    function subtrair() {
+        // pegar o número atual
+        const p = document.querySelector("p")
+        var numero = parseInt(p.innerText)
+    
+        // somar mais 1 ao número atual
+        numero = numero - 1
+        console.log(numero)
+    
+        // atualizar o número na tela
+        p.innerText = numero
+        
     }
   </script>
+     
 </body>
 
 </html>
